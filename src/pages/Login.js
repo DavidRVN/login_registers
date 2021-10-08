@@ -9,12 +9,14 @@ import { Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 function Login(props) {
   const cookies = new Cookies();
   const [data, setData] = useState([]);
-  const baseUrl = "https://localhost:7220/api/Users";
+  const baseUrl = "https://localhost:7027/api/usuarios";
 
   const [modalInsertar, setModalInsertar] = useState(false);
   const manejoModal = () => {
     setModalInsertar(!modalInsertar);
   };
+
+  document.title = "Login post";
 
   const [getUsers, setUser] = useState({
     username: "",
